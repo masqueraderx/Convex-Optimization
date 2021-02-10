@@ -1,0 +1,57 @@
+\documentclass[12pt, a4 paper]{article}
+\usepackage{geometry}
+\geometry{left=2cm, right=2cm, top=1.5cm, bottom=1.5cm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{framed}
+\usepackage{caption}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     Q1     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{framed}
+    \section{[Q1]}
+    Last week, we talked about the gradient and the hessian. 
+    Gradient is the direction which the function descends fastest.
+\end{framed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     Q2     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{framed}
+    \section{[Q2]}
+    done
+\end{framed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     Q3     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{framed}
+    \section{[Q3]}
+    \subsection{(a)}
+    Assume $f(\boldsymbol{x}), f(\boldsymbol{y})$ are convex, then we have,
+    $$
+    f(\boldsymbol{x}) \geq f(\boldsymbol{y}) + \left< \boldsymbol{x}
+    - \boldsymbol{y}, \nabla f(\boldsymbol{y}) \right>
+    $$
+    $$
+    f(\boldsymbol{y}) \geq f(\boldsymbol{x}) + \left< \boldsymbol{y}
+    - \boldsymbol{x}, \nabla f(\boldsymbol{x}) \right>
+    $$
+    \indent Combine the 2 inequalities together and we can get,
+    \begin{align*}
+        f(\boldsymbol{x}) + f(\boldsymbol{y}) \geq f(\boldsymbol{y})
+        + f(\boldsymbol{x}) + \left< \boldsymbol{x}-\boldsymbol{y},
+        \nabla f(\boldsymbol{y}) \right>  &+ \left< \boldsymbol{y}-
+        \boldsymbol{x}, \nabla f(\boldsymbol{x}) \right>  \\
+        -\left< \boldsymbol{x}-\boldsymbol{y},
+        \nabla f(\boldsymbol{y}) \right> - \left< \boldsymbol{y}-\boldsymbol{x},
+        \nabla f(\boldsymbol{x}) \right> &\geq 0 \\
+        \left< \boldsymbol{y}-\boldsymbol{x}, \nabla f(\boldsymbol{y}) \right>
+        + \left< \boldsymbol{y}-\boldsymbol{x}, -\nabla f(\boldsymbol{x}) \right>
+        &\geq 0 \\
+        \left< \boldsymbol{y} - \boldsymbol{x}, \nabla f(\boldsymbol{y})
+        - \nabla f(\boldsymbol{x}) \right> &\geq 0
+    \end{align*}
+
+    \subsection{(b)}
+    \subsection{(c)}
+\end{framed}
+\end{document}
