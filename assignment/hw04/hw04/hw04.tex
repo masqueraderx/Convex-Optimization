@@ -300,15 +300,11 @@
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Q8   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \begin{framed}
         \section{[Q8]}
-        Note that the backtracking strategy here I used didn't always
-        take $\alpha$ as $1.0$. Instead, it takes previous best $\alpha$
-        as input and iterates again. The main reason I used this is Because
-        i think it's more engineering. 
         \subsection{(a)}
         Here I set the minimum gradient tolerance as \textbf{1e-3}. And I think the best parameters
-         of $c$ and $\rho$ are \textbf{0.1} and \textbf{0.2}. \textbf{962} 
-         gradient steps are required when using line search method. By the combined
-          backtracking searches, total number of iterations is \textbf{965}. Compared 
+         of $c$ and $\rho$ are \textbf{0.1} and \textbf{0.3}. \textbf{128} 
+         gradient steps are required when using backtracking method. By the combined
+          backtracking searches, total number of iterations is \textbf{629}. Compared 
           with bisection which brings total iterations to 5120, backtracking 
           method is a more faster way to converge.
 
@@ -316,8 +312,9 @@
         If we set $\alpha \approx 0.001$ and $\beta_{k} \approx 0.95$, it converge at iteration
         \textbf{383}. In best case, I set $\alpha$ as \textbf{0.001} and $\beta$ as \textbf{0.9}. 
         And the total iterations are \textbf{210}. From my persepctive, when using backtracking 
-        to adjust $\alpha$ at each iteration(where $\beta$ is fixed as \textbf{0.9}), total 
-        iterations are \textbf{210}. Combined backtracking, total iteration is \textbf{213}.
+        to adjust $\alpha$ at each iteration(where $\beta$ is fixed as \textbf{0.9}),  and the 
+        corresponding $c$ and $\rho$ is \textbf{0.01} and \textbf{0.92}, total 
+        iterations are \textbf{211}. Combined backtracking, total iteration is \textbf{13064}.
 
         \subsection{(c)}
         When setting $\alpha \approx 0.001$, the total iteration is \textbf{212}. When using
@@ -329,7 +326,7 @@
         When using backtracking, the total iteration is \textbf{6}.
         
         \subsection{(e)}
-        When using backtracking, the total iteration is \textbf{12}. 
+        When using backtracking, the total iteration is \textbf{18}. 
     \end{framed}
 
     %%%%%%%%%%%%%%% Appendix %%%%%%%%%%%%%%
