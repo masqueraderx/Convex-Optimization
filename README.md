@@ -20,3 +20,9 @@ The mainly contains some **realization of mathmatical theories** about convex op
 * convergence analysis
 * accelerated first order methods (Heavy ball, Neseterov)
 * Newton's method
+* Quasi-Newton method: BFGS
+* Subgradient descent
+* Proximal Algorithms
+## Constrained optimization
+* Geometric view of constrained problems
+
