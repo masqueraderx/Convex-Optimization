@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.24)  21 MAR 2021 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.24)  28 MAR 2021 00:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -265,63 +265,130 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count273
-LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<7c.jpg, id=1, 722.7pt x 361.35pt>
-File: 7c.jpg Graphic file (type jpg)
-<use 7c.jpg>
-Package pdftex.def Info: 7c.jpg  used on input line 96.
-(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
-<7c-lam0.jpg, id=2, 722.7pt x 361.35pt>
-File: 7c-lam0.jpg Graphic file (type jpg)
-<use 7c-lam0.jpg>
-Package pdftex.def Info: 7c-lam0.jpg  used on input line 100.
-(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
-<7c-lam5.jpg, id=3, 722.7pt x 361.35pt>
-File: 7c-lam5.jpg Graphic file (type jpg)
-<use 7c-lam5.jpg>
-Package pdftex.def Info: 7c-lam5.jpg  used on input line 104.
-(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
-<7c-lam10.jpg, id=4, 722.7pt x 361.35pt>
-File: 7c-lam10.jpg Graphic file (type jpg)
-<use 7c-lam10.jpg>
-Package pdftex.def Info: 7c-lam10.jpg  used on input line 108.
-(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
-<7d.jpg, id=5, 722.7pt x 361.35pt>
-File: 7d.jpg Graphic file (type jpg)
-<use 7d.jpg>
-Package pdftex.def Info: 7d.jpg  used on input line 114.
-(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
- [1
+) [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \vbox (badness 1895) detected at line 130
+Underfull \vbox (badness 10000) detected at line 222
+ []
+
+[2] [3] [4]
+Underfull \vbox (badness 10000) detected at line 336
+ []
+
+[5]
+<7c.jpg, id=28, 722.7pt x 361.35pt>
+File: 7c.jpg Graphic file (type jpg)
+<use 7c.jpg>
+Package pdftex.def Info: 7c.jpg  used on input line 377.
+(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
+<7c-lam0.jpg, id=29, 722.7pt x 361.35pt>
+File: 7c-lam0.jpg Graphic file (type jpg)
+<use 7c-lam0.jpg>
+Package pdftex.def Info: 7c-lam0.jpg  used on input line 381.
+(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
+<7c-lam5.jpg, id=30, 722.7pt x 361.35pt>
+File: 7c-lam5.jpg Graphic file (type jpg)
+<use 7c-lam5.jpg>
+Package pdftex.def Info: 7c-lam5.jpg  used on input line 385.
+(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
+<7c-lam10.jpg, id=31, 722.7pt x 361.35pt>
+File: 7c-lam10.jpg Graphic file (type jpg)
+<use 7c-lam10.jpg>
+Package pdftex.def Info: 7c-lam10.jpg  used on input line 389.
+(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
+<7d.jpg, id=32, 722.7pt x 361.35pt>
+File: 7d.jpg Graphic file (type jpg)
+<use 7d.jpg>
+Package pdftex.def Info: 7d.jpg  used on input line 395.
+(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
+
+Underfull \vbox (badness 10000) detected at line 411
+ []
+
+[6] [7 </Users/gexueren/Desktop/6270/assignment/hw05/hw05/7c.jpg>]
+Underfull \vbox (badness 1147) detected at line 411
  []
 
 
-Underfull \vbox (badness 1895) detected at line 130
+Underfull \vbox (badness 1147) detected at line 411
  []
 
-[2 </Users/gexueren/Desktop/6270/assignment/hw05/hw05/7c.jpg> </Users/gexueren/Desktop/6270/assignment/hw05/hw05/7c-lam0.jpg>] [3 </Users/gexueren/Desktop/6270/assignment/hw05/hw05/7c-lam5.jpg> </Users/gexueren/Desktop/6270/assignment/hw05/hw05/7c-lam10.jpg> </Users/gexueren/Desktop/6270/assignment/hw05/hw05/7d.jpg>] (/Users/gexueren/Desktop/6270/assignment/hw05/hw05/hw05.aux) ) 
+[8 </Users/gexueren/Desktop/6270/assignment/hw05/hw05/7c-lam0.jpg> </Users/gexueren/Desktop/6270/assignment/hw05/hw05/7c-lam5.jpg> </Users/gexueren/Desktop/6270/assignment/hw05/hw05/7c-lam10.jpg> </Users/gexueren/Desktop/6270/assignment/hw05/hw05/7d.jpg>]
+<Q9_e.png, id=44, 804.00375pt x 434.62375pt>
+File: Q9_e.png Graphic file (type png)
+<use Q9_e.png>
+Package pdftex.def Info: Q9_e.png  used on input line 531.
+(pdftex.def)             Requested size: 284.52162pt x 142.2657pt.
+ [9] [10]
+<Q10_1.jpg, id=53, 722.7pt x 361.35pt>
+File: Q10_1.jpg Graphic file (type jpg)
+<use Q10_1.jpg>
+Package pdftex.def Info: Q10_1.jpg  used on input line 551.
+(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
+<Q10_2.jpg, id=54, 722.7pt x 361.35pt>
+File: Q10_2.jpg Graphic file (type jpg)
+<use Q10_2.jpg>
+Package pdftex.def Info: Q10_2.jpg  used on input line 559.
+(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
+<Q10_3.jpg, id=55, 722.7pt x 361.35pt>
+File: Q10_3.jpg Graphic file (type jpg)
+<use Q10_3.jpg>
+Package pdftex.def Info: Q10_3.jpg  used on input line 568.
+(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
+<Q10_4.jpg, id=56, 722.7pt x 361.35pt>
+File: Q10_4.jpg Graphic file (type jpg)
+<use Q10_4.jpg>
+Package pdftex.def Info: Q10_4.jpg  used on input line 574.
+(pdftex.def)             Requested size: 284.53154pt x 142.26578pt.
+ [11 </Users/gexueren/Desktop/6270/assignment/hw05/hw05/Q9_e.png> </Users/gexueren/Desktop/6270/assignment/hw05/hw05/Q10_1.jpg>] (/usr/local/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 583.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 765.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Underfull \vbox (badness 10000) detected at line 796
+ []
+
+[12 </Users/gexueren/Desktop/6270/assignment/hw05/hw05/Q10_2.jpg> </Users/gexueren/Desktop/6270/assignment/hw05/hw05/Q10_3.jpg> </Users/gexueren/Desktop/6270/assignment/hw05/hw05/Q10_4.jpg>] [13]
+Underfull \vbox (badness 10000) detected at line 796
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 796
+ []
+
+[14]
+Underfull \vbox (badness 10000) detected at line 796
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 796
+ []
+
+[15] [16] (/Users/gexueren/Desktop/6270/assignment/hw05/hw05/hw05.aux) ) 
 Here is how much of TeX's memory you used:
- 5816 strings out of 480608
- 83710 string characters out of 5903630
- 333584 words of memory out of 5000000
- 21660 multiletter control sequences out of 15000+600000
- 538501 words of font info for 47 fonts, out of 8000000 for 9000
+ 6743 strings out of 480608
+ 93082 string characters out of 5903630
+ 1495787 words of memory out of 5000000
+ 22562 multiletter control sequences out of 15000+600000
+ 541766 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,50p,483b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on /Users/gexueren/Desktop/6270/assignment/hw05/hw05/hw05.pdf (3 pages, 271958 bytes).
+ 41i,15n,50p,483b,1666s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on /Users/gexueren/Desktop/6270/assignment/hw05/hw05/hw05.pdf (16 pages, 568962 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
