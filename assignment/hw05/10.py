@@ -39,6 +39,7 @@ def subGradient(alpha, tau, A, x, y, maxiter, delta, flag):
         print(x.flatten())
     return x, value, iteration
 
+
 def Proximal(alpha, tau, A, x, y, maxiter, delta):
     def T(x):
         for i in range(len(x)):
@@ -125,18 +126,23 @@ if __name__ == '__main__':
 
 ############################################# Q2 #####################################################
     x = np.ones(N) # 初值 (N, )
-    _, fValue_0, iteration_0 = subGradient(alpha=0.001, tau=optimal_tau, A=A, x=x, y=y, maxiter=20000, delta=1e-3, flag=True)
+    _, fValue_0, iteration_0 = subGradient(alpha=0.001, tau=optimal_tau, A=A, x=x, y=y, maxiter=5000, delta=1e-3, flag=True)
     plt.figure(figsize=(10, 5))
     plt.plot(iteration_0, fValue_0, color='r', label=r'$\alpha_{k}= \frac{\alpha}{\sqrt{k}}$')
+    plt.title('SubGradient Algo')
+    plt.xlabel('iterations')
+    plt.ylabel('Value of Objective function')
+    plt.legend()
+    plt.savefig(os.path.join(savepath, 'Q10_2_1.jpg'))
 
     x = np.ones(N) # 初值 (N, )
-    _, fValue_1, iteration_1 = subGradient(alpha=0.001, tau=optimal_tau, A=A, x=x, y=y, maxiter=20000, delta=1e-3, flag=False)
+    _, fValue_1, iteration_1 = subGradient(alpha=0.03, tau=optimal_tau, A=A, x=x, y=y, maxiter=5000, delta=1e-3, flag=False)
     plt.plot(iteration_1, fValue_1, color='g', label=r'$\alpha_{k}= \frac{\alpha}{k}$')
     plt.title('SubGradient Algo')
     plt.xlabel('iterations')
     plt.ylabel('Value of Objective function')
     plt.legend()
-    plt.savefig(os.path.join(savepath, 'Q10_2.jpg'))
+    plt.savefig(os.path.join(savepath, 'Q10_2_2.jpg'))
 
 # ############################################# Q3 #####################################################
     x = np.ones(N) # 初值 (N, )

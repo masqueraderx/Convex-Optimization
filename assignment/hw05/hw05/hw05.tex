@@ -577,12 +577,21 @@
 
         \subsection{(b)}
         {\centering
-        \includegraphics[width=10cm, height=5cm]{Q10_2.jpg}
-        \captionof{figure}{Subgradient Descent} 
+        \includegraphics[width=10cm, height=5cm]{Q10_2_1.jpg}
+        \captionof{figure}{Subgradient Descent, $\frac{\alpha}{\sqrt{k}}$} 
+        }
+        
+        {\centering
+        \includegraphics[width=10cm, height=5cm]{Q10_2_2.jpg}
+        \captionof{figure}{Subgradient Descent, $\frac{\alpha}{k}$} 
         }
         Here, If set $\alpha_{k}$ as fixed, it's not guaranteed that it can 
         converge. And If we set $\alpha_{k}=\frac{\alpha}{\sqrt{k}}$ and $\alpha_{k}
-        =\frac{\alpha}{k}$, it converges as shown in Figure(8).
+        =\frac{\alpha}{k}$, it converges as shown in Figure(8) and Figure(9).
+        For $\frac{\alpha}{\sqrt{k}}$, I set $\alpha$ as 0.001, and for 
+        $\frac{\alpha}{k}$, I set $\alpha$ as 0.03. Apprently, for 
+        $\frac{\alpha}{\sqrt{k}}$, it needs more than 5000 iterations to
+        converge.
 
         \subsection{(c)}
         {\centering
@@ -783,18 +792,24 @@ if __name__ == '__main__':
 
     ######################## Q2 #######################
     x = np.ones(N) # initial value (N, )
-    _, fValue_0, iteration_0 = subGradient(alpha=0.001, tau=optimal_tau, A=A, x=x, y=y, maxiter=20000, delta=1e-3, flag=True)
+    _, fValue_0, iteration_0 = subGradient(alpha=0.001, tau=optimal_tau, A=A, x=x, y=y, maxiter=5000, delta=1e-3, flag=True)
     plt.figure(figsize=(10, 5))
     plt.plot(iteration_0, fValue_0, color='r', label=r'$\alpha_{k}= \frac{\alpha}{\sqrt{k}}$')
+    plt.title('SubGradient Algo')
+    plt.xlabel('iterations')
+    plt.ylabel('Value of Objective function')
+    plt.legend()
+    plt.savefig(os.path.join(savepath, 'Q10_2_1.jpg'))
 
     x = np.ones(N) # initial value (N, )
-    _, fValue_1, iteration_1 = subGradient(alpha=0.001, tau=optimal_tau, A=A, x=x, y=y, maxiter=20000, delta=1e-3, flag=False)
+    _, fValue_1, iteration_1 = subGradient(alpha=0.03, tau=optimal_tau, A=A, x=x, y=y, maxiter=5000, delta=1e-3, flag=False)
+    plt.figure(figsize=(10, 5))
     plt.plot(iteration_1, fValue_1, color='g', label=r'$\alpha_{k}= \frac{\alpha}{k}$')
     plt.title('SubGradient Algo')
     plt.xlabel('iterations')
     plt.ylabel('Value of Objective function')
     plt.legend()
-    plt.savefig(os.path.join(savepath, 'Q10_2.jpg'))
+    plt.savefig(os.path.join(savepath, 'Q10_2_2.jpg'))
 
     ######################## Q3 #######################
     x = np.ones(N) # initial value (N, )
