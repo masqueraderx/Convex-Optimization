@@ -1,6 +1,5 @@
 import numpy as np
 import cvxpy as cp
-import random
 import os
 from matplotlib import pyplot as plt
 
@@ -29,14 +28,17 @@ def subGradient(alpha, tau, A, x, y, maxiter, delta, flag):
     iteration = []
     while (k < maxiter) and (np.linalg.norm(x - np.mat(x0)) > delta):
         dk = A.T @ (A @ x - y) + tau * np.sign(x) #(N, 1)
-        if flag:
-            x = x - alpha * dk / np.sqrt(k) # (N, 1)
-        else:
+        if flag == 'fixed':
+            x = x - alpha * dk # (N, 1)
+        elif flag == 'k':
             x = x - alpha * dk / k
+        else:
+            x = x - alpha * dk / np.sqrt(k)  # (N, 1)
         value.append(funcValue(tau, A, x, y))
+
         iteration.append(k)
         k += 1
-        print(x.flatten())
+        print(np.linalg.norm(x-np.mat(x0)))
     return x, value, iteration
 
 
@@ -126,7 +128,7 @@ if __name__ == '__main__':
 
 ############################################# Q2 #####################################################
     x = np.ones(N) # 初值 (N, )
-    _, fValue_0, iteration_0 = subGradient(alpha=0.001, tau=optimal_tau, A=A, x=x, y=y, maxiter=5000, delta=1e-3, flag=True)
+    _, fValue_0, iteration_0 = subGradient(alpha=0.001, tau=optimal_tau, A=A, x=x, y=y, maxiter=5000, delta=1e-3, flag='sqrt(k)')
     plt.figure(figsize=(10, 5))
     plt.plot(iteration_0, fValue_0, color='r', label=r'$\alpha_{k}= \frac{\alpha}{\sqrt{k}}$')
     plt.title('SubGradient Algo')
@@ -136,13 +138,24 @@ if __name__ == '__main__':
     plt.savefig(os.path.join(savepath, 'Q10_2_1.jpg'))
 
     x = np.ones(N) # 初值 (N, )
-    _, fValue_1, iteration_1 = subGradient(alpha=0.03, tau=optimal_tau, A=A, x=x, y=y, maxiter=5000, delta=1e-3, flag=False)
+    _, fValue_1, iteration_1 = subGradient(alpha=0.02, tau=optimal_tau, A=A, x=x, y=y, maxiter=5000, delta=1e-3, flag='k')
+    plt.figure(figsize=(10, 5))
     plt.plot(iteration_1, fValue_1, color='g', label=r'$\alpha_{k}= \frac{\alpha}{k}$')
     plt.title('SubGradient Algo')
     plt.xlabel('iterations')
     plt.ylabel('Value of Objective function')
     plt.legend()
     plt.savefig(os.path.join(savepath, 'Q10_2_2.jpg'))
+
+    x = np.ones(N) # 初值 (N, )
+    _, fValue_2, iteration_2 = subGradient(alpha=0.0001, tau=optimal_tau, A=A, x=x, y=y, maxiter=5000, delta=1e-3, flag='fixed')
+    plt.figure(figsize=(10, 5))
+    plt.plot(iteration_2, fValue_2, color='y', label=r'fixed $\alpha$')
+    plt.title('SubGradient Algo')
+    plt.xlabel('iterations')
+    plt.ylabel('Value of Objective function')
+    plt.legend()
+    plt.savefig(os.path.join(savepath, 'Q10_2_3.jpg'))
 
 # ############################################# Q3 #####################################################
     x = np.ones(N) # 初值 (N, )
@@ -153,7 +166,7 @@ if __name__ == '__main__':
     plt.ylabel('Value of Objective function')
     plt.title('Proximal Gradient Algo')
     plt.savefig(os.path.join(savepath, 'Q10_3.jpg'))
-#
+
 # ############################################# Q4 #####################################################
     x = np.ones(N) # 初值 (N, )
     _, fValue, iteration = accrProximal(alpha=0.0001, tau=optimal_tau, A=A, x=x, y=y, maxiter=1000, delta=1e-3)
