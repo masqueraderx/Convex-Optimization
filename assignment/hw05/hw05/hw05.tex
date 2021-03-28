@@ -8,7 +8,9 @@
 \usepackage{caption}
 \usepackage{indentfirst}
 \usepackage{graphicx}
+\usepackage[colorlinks,linkcolor=blue]{hyperref}
 \usepackage{pythonhighlight}
+\usepackage[linesnumbered,boxed,ruled,commentsnumbered]{algorithm2e}%%算法包，注意设置所需可选项
 
 \begin{document}
 
@@ -313,24 +315,18 @@
         \end{align}
 
         \subsection{(c)}
-        From lecture, we know,
-        \begin{align}
-            u &\in  \partial \lVert x \rVert_{1}
-        \end{align}
+        From $\lVert x_{0}+td \rvert_{1} \leq \lVert x_{0} 
+        \rVert_{1}$, we can get,
         \begin{equation}
-            \left\{
+            \mathbf{d} = \left\{
                 \begin{aligned}
-                u_{n} & = \text{sign}(x_{n}), \text{ if } n \in \Gamma  \\
-                \lvert u_{n} \rvert & \leq 1, \text{ if } n \notin \Gamma \\
+                &-\text{sign}(x_{n}), &\text{ if } n \in \Gamma  \\
+                &0, &\text{ if } n \notin \Gamma \\
                 \end{aligned}
                 \right.
         \end{equation}
-        \indent where $\Gamma = \left\{n: x_{n} \neq 0 \right\}$, therefore, we 
-        can have,
-        \begin{align}
-            \mathbf{D}(x_{0}) = \left\{ \mathbf{d}:
-            \langle \mathbf{d}, u\rangle \leq 0 \right\}
-        \end{align}
+        \indent where $\Gamma = \left\{n: x_{n} \neq 0 \right\}$.
+
         
 
     \end{framed}
@@ -522,9 +518,34 @@
             \sum\limits_{n} &\max \left\{ 0, -\alpha_{n} + 
             \frac{1}{\ln(2) \upsilon^{\star}} \right\} = 1
         \end{align}
-        \indent we can find all possible combinations of set $\Gamma_{0}$ and for each
-        $\Gamma_{0}$, using equations from above, we can have one $\upsilon$. The $\upsilon$
-        that results in the minimum objective function will be the optimizer $\upsilon^{\star}$.
+        \indent Here is the algorithm to solve this problem,
+
+
+        \begin{algorithm}[H]
+            \SetAlgoLined
+            \KwData{Set $\mathbf{D} = \left\{ \alpha_{i} \right\}_{i=1}^{N}$}
+            \KwResult{$\upsilon^{\star}$}
+            $\upsilon_{1} = \frac{N}{\ln(2) (1+\sum_{i=1}^{N} \alpha_{i})}$\;
+            Sort $\mathbf{D}$ in ascending order\;
+            i=1\;
+            
+            \While{$\upsilon_{i} \leq \frac{1}{\ln(2) \cdot \alpha_{i}}$}{
+
+                $\alpha_{i}=0$\;
+                $N=N-1$\;
+                $i=i+1$\;
+                $\upsilon_{i}=\frac{N}{\ln(2)(1+\sum_{i} \alpha_{i}) }$\;
+            }
+        \caption{Algorithm to find $\upsilon^{\star}$}
+        \end{algorithm}
+        \indent Note that in step 8, $\sum_{i} \alpha_{i}$ means you
+        should add all elements in set $\mathbf{D}$ while $N=N-1$.
+        \indent Briefly sepeaking, in the intial state, I assume all the 
+        patch needs to be filled with water, and then iterates, in
+        the iteration, I always remove the patch which has the highest
+        ground level $\alpha_{i}$ until i can found the patch which satisfy
+        $\sum\limits_{n} -\alpha_{n} + 
+        \frac{1}{\ln(2) \upsilon^{\star}}=1$.
 
         \subsection{(e)}
         {\centering
@@ -578,6 +599,8 @@
 
     \begin{framed}
         \section{Appendix}
+        All the source code can be found from
+        \href{https://github.com/masqueraderx}{my personal Github}.
         \subsection{Q7}
         \begin{python}
 import numpy as np
