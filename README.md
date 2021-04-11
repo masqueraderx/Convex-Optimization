@@ -25,4 +25,11 @@ The mainly contains some **realization of mathmatical theories** about convex op
 * Proximal Algorithms
 ## Constrained optimization
 * Geometric view of constrained problems
-
+* Fenchel duality
+* Lagrange duality
+* Karush-Kuhn-Tucker (KKT) conditions
+## Methods for constrained optimization
+* barrier techniques
+* projected gradient descent
+* splitting methods, alternating direction method of multipliers
+* ADMM
